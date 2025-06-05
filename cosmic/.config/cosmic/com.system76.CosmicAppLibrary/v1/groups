@@ -1,0 +1,74 @@
+[
+    (
+        name: "cosmic-office",
+        icon: "folder-symbolic",
+        filter: Categories(
+            categories: [
+                "Office",
+            ],
+            exclude: [
+                "kitty",
+                "org.gnome.Software",
+                "io.gitlab.adhami3310.Impression",
+                "org.gnome.Boxes",
+                "org.gnome.Nautilus",
+                "com.system76.CosmicScreenshot",
+                "io.gitlab.adhami3310.Converter",
+                "com.system76.CosmicFiles",
+                "nvim",
+            ],
+            include: [
+                "org.gnome.Totem",
+                "org.gnome.eog",
+                "simple-scan",
+                "thunderbird",
+            ],
+        ),
+    ),
+    (
+        name: "cosmic-utilities",
+        icon: "folder-symbolic",
+        filter: Categories(
+            categories: [
+                "Utility",
+            ],
+            exclude: [
+                "nvim",
+                "kitty",
+                "com.system76.CosmicFiles",
+            ],
+            include: [
+                "nm-connection-editor",
+                "com.system76.CosmicPlayer",
+                "com.system76.CosmicScreenshot",
+                "com.system76.CosmicSettings",
+                "com.system76.CosmicStore",
+                "com.system76.CosmicTerm",
+                "io.gitlab.adhami3310.Impression",
+                "org.gnome.Boxes",
+                "rygel-preferences",
+                "org.gnome.Software",
+                "io.gitlab.adhami3310.Converter",
+                "org.gnome.SystemMonitor",
+                "blueman-manager",
+                "org.pulseaudio.pavucontrol",
+                "nwg-panel-config",
+                "org.gnome.Nautilus",
+                "valve-URI-vrmonitor",
+                "valve-vrmonitor",
+                "org.gnome.TextEditor",
+                "com.system76.CosmicEdit",
+            ],
+        ),
+    ),
+    (
+        name: "Games",
+        icon: "folder-symbolic",
+        filter: AppIds([
+            "Modrinth App",
+            "steam",
+            "supertuxkart",
+            "openarena",
+        ]),
+    ),
+]

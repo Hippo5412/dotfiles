@@ -1,0 +1,78 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["custom/power", "custom/menu"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "pulseaudio", "power-profiles-daemon", "battery"],
+  "cpu": {
+    "format": " {}%",
+  },
+  "memory": {
+    "format": " {}%",
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+  },
+  "custom/power": {
+	"format": "󰐥",
+	"on-click": "wlogout",
+  },
+  "custom/menu": {
+     	"format": "",
+     	"on-click": "wofi --show drun --prompt='' --allow-images",
+      "tooltip": false
+ 	},
+  "tray": {
+    "spacing": 16
+  },
+  "network": {
+      "format-wifi": "󰘊",
+      "format-ethernet": "",
+      "format-disconnected": "󰞃",
+      "tooltip-format": "{ifname}\n{ipaddr}",
+      "on-click": "nm-connection-editor"
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "",
+    "format-connected": "󰂯",
+    "tooltip-format": "{num_connections} {status}",
+    "on-click": "blueman-manager"
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+  "pulseaudio": {
+      "format": "󰋋 {volume}%",
+      "format-bluetooth": "󰥰 {volume}%",
+      "format-muted": "󰟎",
+      "scroll-step": 5,
+      "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+      "on-click": "pavucontrol",
+      "ignored-sinks": ["Easy Effects Sink"]
+  },
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+                "mode": "month",
+                "on-scroll": 1,
+                "on-scroll-down": "shift_down",
+                "on-scroll-up": "shift_up",
+                "format": {
+                          "months":     "<span color='#d79921'><b>{}</b></span>",
+                          "days":       "<span color='#458588'>{}</span>",
+                          "weekdays":   "<span color='#689d6a'><b>{}</b></span>",
+                          "today":      "<span color='#b16286'><b>{}</b></span>"
+                          }
+                },
+  }}

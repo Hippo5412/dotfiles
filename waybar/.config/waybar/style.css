@@ -1,0 +1,26 @@
+* {
+    font-family: Roboto Mono Nerd Font;
+    font-size: 16px;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#workspaces, 
+#cpu, 
+#memory, 
+#battery,
+#custom-menu,
+#custom-power,
+#tray,
+#network, 
+#bluetooth, 
+#power-profiles-daemon, 
+#pulseaudio, 
+#clock {
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #fbf1c7
+}
+
