@@ -24,7 +24,7 @@
 }
 {
     "label" : "hibernate",
-    "action" : "systemctl hibernate",
+    "action" : "systemctl hibernate && hyprlock",
     "text" : "Hibernate",
     "keybind" : "3"
 }
