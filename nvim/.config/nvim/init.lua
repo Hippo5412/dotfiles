@@ -15,6 +15,7 @@ vim.pack.add({
 	{src = "https://github.com/nvim-lua/plenary.nvim"},
 	{src = "https://github.com/nvim-treesitter/nvim-treesitter"},
 	{src = "https://github.com/mason-org/mason.nvim"},
+	{src = "https://github.com/ms-jpq/coq_nvim"}
 })
 
 require("mason").setup()
@@ -24,6 +25,8 @@ vim.lsp.enable(
 	'clangd',
 	'pyright'
 )
+
+vim.cmd("COQnow --shut-up")
 
 vim.cmd("colorscheme gruvbox")
 
