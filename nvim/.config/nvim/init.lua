@@ -16,12 +16,16 @@ vim.pack.add({
 	{src = "https://github.com/nvim-treesitter/nvim-treesitter"},
 	{src = "https://github.com/mason-org/mason.nvim"},
 	{src = "https://github.com/mason-org/mason-lspconfig.nvim"},
+	{src = "https://github.com/echasnovski/mini.nvim"},
 })
+
+vim.cmd("colorscheme gruvbox")
 
 require("mason").setup()
 require("mason-lspconfig").setup()
 
-vim.cmd("colorscheme gruvbox")
+require('mini.snippets').setup({})
+require('mini.completion').setup({})
 
 vim.keymap.set('n', '<leader>e', ':Explore<CR>')
 local builtin = require('telescope.builtin')
